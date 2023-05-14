@@ -1,6 +1,5 @@
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material';
-import './Boton.css'
 
 
 const Boton = () => {
