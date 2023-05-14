@@ -1,15 +1,17 @@
 import './reset.css';
 import './Global.css'
+import {ThemeProvider } from '@mui/material/styles';
 import Nav from './Components/Nav/Nav';
-
+import darkTheme from './Theme';
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={darkTheme}>
       <header >
         <Nav></Nav>
       </header>
-    </div>
+
+    </ThemeProvider>
   );
 }
 
