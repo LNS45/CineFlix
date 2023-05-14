@@ -1,0 +1,24 @@
+:root {
+    /*Colores*/
+    --Color-Primario: #2ae433;
+    --Celeste:#6BD1FF;
+    --Azul: #6B5BE2;
+    --Verde: #00C86F;
+    --Lima: #9CD33B;
+    --Naranja: #FF8C2A;
+    --Amarillo: #FFBA05;
+    --Rosa: #DC6EBE;
+    --Gris-Bajo: #9E9E9E;
+    --Gris-Medio: #00000080;
+    --Gris-Fuerte: #00000099;
+    --Negro: #000000;
+    /*Fuentes*/
+    --Fuente-Principal: 'Roboto';
+}
+
+*{
+    font-family: var(--Fuente-Principal), sans-serif;
+}
+body{
+    background-color: var(--Negro);
+}
