@@ -3,6 +3,7 @@ import './Global.css'
 import {ThemeProvider } from '@mui/material/styles';
 import Nav from './Components/Nav/Nav';
 import darkTheme from './Theme';
+import Promocional from './Components/Promocional/Promocional';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <header >
         <Nav></Nav>
       </header>
-
+      <Promocional />
     </ThemeProvider>
   );
 }

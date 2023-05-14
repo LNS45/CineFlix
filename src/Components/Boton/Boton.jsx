@@ -5,7 +5,7 @@ import './Boton.css'
 
 const Boton = () => {
 
-    const colores = useTheme();
+    
 
     return <Button variant="contained" color='primary'> 
         Nuevo Video

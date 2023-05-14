@@ -1,4 +1,4 @@
-import { createTheme} from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 
 //Creacion del tema Oscuro
@@ -8,7 +8,7 @@ const darkTheme = createTheme({
             light: 'red',
             main: '#00bd20',
             dark: '#2ae433',
-            contrastText: '#fff',
+            contrastText: '#black',
         },
         secondary: {
             light: 'red',
