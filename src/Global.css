@@ -2,23 +2,29 @@
     /*Colores*/
     --Color-Primario: #2ae433;
     --Color-Secundario: #268eed;
-    --Celeste:#6BD1FF;
-    --Azul: #6B5BE2;
-    --Verde: #00C86F;
-    --Lima: #9CD33B;
-    --Naranja: #FF8C2A;
-    --Amarillo: #FFBA05;
-    --Rosa: #DC6EBE;
     --Gris-Bajo: #9E9E9E;
     --Gris-Medio: #00000080;
     --Gris-Fuerte: #00000099;
+    --Blanco-Grisado: #F5F5F5;
     --Negro: #000000;
+    --Lima: #9CD33B;
+    --Naranja: #FF8C2A;
+    --Amarillo: #FFBA05;
     /*Fuentes*/
     --Fuente-Principal: 'Roboto';
+    /*Categorias*/
+    --CatSuperheroes:#6BD1FF;
+    --CatTerror: #6B5BE2;
+    --CatCienciaFiccion: #00C86F;
+    --CatAnimacion: #DC6EBE;
+    --CatAccion: #e63535;
 }
 
 *{
     font-family: var(--Fuente-Principal), sans-serif;
+}
+html{
+    font-size: 16px;
 }
 body{
     background-color: var(--Negro);
