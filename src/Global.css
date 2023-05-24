@@ -24,8 +24,44 @@
     font-family: var(--Fuente-Principal), sans-serif;
 }
 html{
-    font-size: 16px;
+    font-size: 100%;
 }
 body{
-    background-color: var(--Negro);
+    background-color: rgba(0, 0, 0, .95);
 }
+
+/*Adaptabilidad*/
+
+/*TV*/
+@media screen and (min-width: 1282px) {
+    html{
+        font-size: 130%;
+    }
+}
+
+/*PC*/
+@media screen and (max-width: 1281px) {
+    html{
+        font-size: 95%;
+    }
+}
+
+/*Tablets*/
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 85%;
+    }
+}
+
+/*Movil*/
+@media screen and (max-width: 482px) {
+    html{
+        font-size: 100%;
+    }
+}
+
+
+
+
+
+

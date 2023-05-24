@@ -11,3 +11,39 @@
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
+
+/*Adaptabilidad*/
+
+/*TV*/
+@media screen and (min-width: 1024px) {
+
+}
+
+/*PC*/
+@media screen and (max-width: 1023px) {
+
+}
+
+/*Tablets*/
+@media screen and (max-width: 768px) {
+    .Categoria{
+        font-size: 1.25rem;
+        width: 7rem;
+        padding: .3125rem;
+        position: absolute;
+        left: 0;
+        bottom: 2rem;
+    }
+}
+
+/*Movil*/
+@media screen and (max-width: 482px) {
+    .Categoria{
+        font-size: .8125rem;
+        width: 5rem;
+        padding: .3125rem;
+        position: absolute;
+        left: 0;
+        bottom: 2rem;
+    }
+}

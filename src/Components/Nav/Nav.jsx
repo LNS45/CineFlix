@@ -5,7 +5,7 @@ import Boton from '../Boton/Boton';
 export const Nav = () => {
     return <nav>
         <a href='http://localhost:3000/CineFlix'><img src={Logo} alt='Logo'  /></a>
-        <Boton />
+        <Boton/>
     </nav>
 };
 
