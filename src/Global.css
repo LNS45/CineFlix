@@ -18,6 +18,18 @@
     --CatCienciaFiccion: #00C86F;
     --CatAnimacion: #DC6EBE;
     --CatAccion: #e63535;
+    /*Bordes*/
+    --BorderSuperheroes: 2px solid var(--CatSuperheroes);
+    --BorderTerror: 2px solid var(--CatTerror);
+    --BorderCienciaFiccion: 2px solid var(--CatCienciaFiccion);
+    --BorderAnimacion: 2px solid var(--CatAnimacion);
+    --BorderAccion: 2px solid var(--CatAccion);
+    /*Sombras*/
+    --ShadowSuperheroes: 0px 0px 5px var(--CatSuperheroes), 1px 1px 5px #4b98bb;
+    --ShadowTerror: 0px 0px 5px var(----CatTerror), 1px 1px 5px #5245b3;
+    --ShadowCienciaFiccion: 0px 0px 5px var(--CatCienciaFiccion), 1px 1px 5px #04a15a;
+    --ShadowAnimacion: 0px 0px 5px var(--CatAnimacion), 1px 1px 5px #b45b9c;
+    --ShadowAccion: 0px 0px 5px var(--CatAccion), 1px 1px 5px #aa2626;
 }
 
 *{
