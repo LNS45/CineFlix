@@ -1,10 +1,19 @@
 import "./VideoCard.css"
 
-const VideoCard = () => {
+const VideoCard = (props) => {
 
-    return <div className="VideoCard">
-        <img src="https://i0.wp.com/www.lacasadeel.net/wp-content/uploads/2019/12/Capitan-Am%C3%A9rica-El-primer-vengador.jpg" alt="Portada"/>
 
+    let estilo = {
+        border: `2px solid ${props.color}`,
+        boxShadow: `0px 0px 5px ${props.color}, 1px 1px 5px ${props.color}`,
+    };
+    let estilobefore= {
+        backgroundImage: `url(${props.personaje})`,
+    };
+    
+    return <div className="VideoCard" style={estilo}>
+        <div style={estilobefore}></div>
+        <img src={props.portada} alt="Portada"/>
     </div>
 }
 

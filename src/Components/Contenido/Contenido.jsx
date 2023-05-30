@@ -1,9 +1,10 @@
 import "./Contenido.css"
-import VideoCard from "../VideoCard/VideoCard";
+
+import Carrusel from "../Carrusel/Carrusel";
 
 const Contenido = () => {
     return <section className="Contenido">
-        <VideoCard />
+
     </section>
 }
 
