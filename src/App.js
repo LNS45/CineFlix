@@ -1,17 +1,25 @@
 import './reset.css';
 import './Global.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {ThemeProvider } from '@mui/material/styles';
-import Nav from './Components/Nav/Nav';
 import darkTheme from './Theme';
-import Banner from './Components/Banner/Banner';
-import Contenido from './Components/Contenido/Contenido';
+import Home from './pages/Home';
+import Form from './pages/Form';
+
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Nav></Nav>
-      <Banner />
-      <Contenido />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+
+          </Route>
+          <Route path='/Form' element={<Form />}>
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

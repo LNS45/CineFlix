@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/Logo.png'
 import Boton from '../Boton/Boton';
 import styled from '@emotion/styled';
@@ -23,7 +24,7 @@ export const Nav = () => {
     `;
 
     return <Nav>
-        <a href='http://localhost:3000/CineFlix'><NavImg src={Logo} alt='Logo'  /></a>
+        <Link to='/'><NavImg src={Logo} alt='Logo'  /></Link>
         <Boton/>
     </Nav>
 };

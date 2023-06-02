@@ -1,11 +1,14 @@
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 
 
 const Boton = () => {
-    return <Button variant="contained" color='primary'> 
-        Nuevo Video
-    </Button>
+    return <Link to={"/Form"}>
+            <Button variant="contained" color='primary'> 
+                Nuevo Video
+            </Button>
+        </Link>
 };
 
 export default Boton;

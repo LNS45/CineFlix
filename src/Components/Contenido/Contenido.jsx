@@ -2,18 +2,15 @@ import styled from '@emotion/styled';
 import CarruselContainer from './CarruselContainer';
 
 const Contenido = () => {
+    
 
     const categorias = [
         {id: "1", tipo: "Superheroes", color: "#6BD1FF"},
         {id: "2", tipo: "Terror", color:"#6B5BE2"},
-        {id: "3", tipo: "CienciaFiccion", color:"#00C86F"},
+        {id: "3", tipo: "Ciencia Ficcion", color:"#00C86F"},
         {id: "4", tipo:"Animacion", color: "#DC6EBE"},
         {id: "5", tipo: "Accion", color: "#e63535"}
     ];
-
-    const limitarCategorias = () => {
-        
-    };
 
     const Contenido = styled.section`
         position: relative;
@@ -37,3 +34,7 @@ const Contenido = () => {
 }
 
 export default Contenido;
+
+
+
+//INSERT INTO movies VALUES(1,"Titulo","Cover","Icono", "Categoria", "Descripcion")
