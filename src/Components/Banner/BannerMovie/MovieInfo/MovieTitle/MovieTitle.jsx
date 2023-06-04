@@ -1,10 +1,14 @@
 
 import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled from "@emotion/styled";
 import { IconContext } from "react-icons";
+import { MovieContext } from "../../../../../contexts/MovieContext";
+
 
 const MovieTitle = () => {
+
+    const { movieSelected } = useContext(MovieContext)
 
     let [like, setLike] = useState(false);
 
@@ -41,7 +45,7 @@ const MovieTitle = () => {
     `;
 
     return <MovieTitle>
-        <h1>La Liga de la Justicia</h1>
+        <h1>{movieSelected}</h1>
         <IconContext.Provider value={{ color: "red", className: 'Like'}}>
             {like === false ? <AiOutlineHeart  onClick={handleLikeClick} className="Like"/> : <AiFillHeart  onClick={handleLikeClick} className="Like"/>}
         </IconContext.Provider>

@@ -1,9 +1,12 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import { MovieContext } from "../../../../../contexts/MovieContext";
 
 
 const VideoCard = (props) => {
 
-    const {color, personaje, portada} = props;
+    const {color, personaje, portada, title} = props;
+    const {movieSelected, setMovieSelected} = useContext(MovieContext);
 
     const VideoCard = styled.div`
         position: relative;
@@ -48,17 +51,9 @@ const VideoCard = (props) => {
         }
     `;
     
-    return <VideoCard>
+    return <VideoCard onClick={() => setMovieSelected(title)}>
         <img src={portada} alt="Portada"/>
     </VideoCard>
 }
 
 export default VideoCard;
-
-/*    let estilo = {
-        border: `2px solid ${props.color}`,
-        boxShadow: `0px 0px 5px ${props.color}, 1px 1px 5px ${props.color}`,
-    };
-    let estilobefore= {
-        backgroundImage: `url(${props.personaje})`,
-    }; */

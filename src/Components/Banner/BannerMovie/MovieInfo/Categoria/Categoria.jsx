@@ -11,10 +11,11 @@ const Categoria = (props) => {
         border-radius: 10px;
         color: var(--Blanco-Grisado);
         font-weight: 400;
-        font-size: 3.125rem;
+        font-size: 2.1875rem;
         text-align: center;
         text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
         cursor: pointer;
+        align-self: center;
         
 
             /*Tablets*/

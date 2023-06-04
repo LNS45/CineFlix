@@ -56,7 +56,7 @@ const MovieInfo = () => {
     `;
 
     return <MovieInfo>
-        <Categoria />
+        <Categoria tipo="Superheroes" color="#6BD1FF"/>
         <MovieTitle />
         <MovieDescription />
     </MovieInfo>

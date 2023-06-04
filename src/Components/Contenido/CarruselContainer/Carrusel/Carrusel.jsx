@@ -12,7 +12,7 @@ const Carrusel = (props) => {
 
     return <Slider className="Carrusel" slidesToShow={3} adaptiveHeight="true" autoplaySpeed={3000} autoplay="true" centerMode="true" centerPadding="-10px" focusOnSelect="true" speed={1000} >
             {pelis.map((peli, index) => (
-                <VideoCard color={color} portada={peli.portada} personaje={peli.personaje} key={index}/>
+                <VideoCard color={color} portada={peli.portada} personaje={peli.personaje} key={index} title={peli.title}/>
             ))}
     </Slider> 
 }
