@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import { MovieContext } from "../../../../../contexts/MovieContext";
 
 
 const MovieDescription = () => {
+
+    const { movieSelected } = useContext(MovieContext);
 
     const MovieDescription = styled.p`
         font-size: 1rem;
@@ -14,7 +18,7 @@ const MovieDescription = () => {
     `;
 
     return <MovieDescription>
-        Gracias a su renovada fe en la humanidad e inspirado por el acto de altruísmo de Superman, Bruce Wayne pide ayuda a su nueva aliada, Diana Prince, para enfrentar a un enemigo aún más peligroso.
+        {movieSelected.description}
     </MovieDescription>
 };
 

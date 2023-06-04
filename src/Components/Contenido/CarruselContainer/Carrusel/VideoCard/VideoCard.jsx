@@ -5,9 +5,9 @@ import { MovieContext } from "../../../../../contexts/MovieContext";
 
 const VideoCard = (props) => {
 
-    const {color, personaje, portada, title} = props;
+    const {color, personaje, title, description, cover} = props;
     const {movieSelected, setMovieSelected} = useContext(MovieContext);
-
+    console.log(cover);
     const VideoCard = styled.div`
         position: relative;
         width: 380px;
@@ -51,8 +51,8 @@ const VideoCard = (props) => {
         }
     `;
     
-    return <VideoCard onClick={() => setMovieSelected(title)}>
-        <img src={portada} alt="Portada"/>
+    return <VideoCard onClick={() => setMovieSelected({...movieSelected, title: title, description: description, cover: cover} )}>
+        <img src={cover} alt="Portada"/>
     </VideoCard>
 }
 

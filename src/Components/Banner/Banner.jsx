@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
 import BannerMovie from './BannerMovie/BannerMovie';
+import { useContext } from 'react';
+import { MovieContext } from '../../contexts/MovieContext';
 
 const Banner = () => {
+
+    const {movieSelected} = useContext(MovieContext);
 
     const Banner = styled.section`
         position: relative;
@@ -21,7 +25,7 @@ const Banner = () => {
             bottom: 0;
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            background-image: url("https://images.hdqwalls.com/download/marvel-vs-dc-1u-1360x768.jpg");
+            background-image: url(${movieSelected.cover});
             z-index: -1;
             filter: blur(1px);
             opacity: 0.5;

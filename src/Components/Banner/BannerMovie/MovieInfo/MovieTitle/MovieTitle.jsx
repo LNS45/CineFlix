@@ -45,7 +45,7 @@ const MovieTitle = () => {
     `;
 
     return <MovieTitle>
-        <h1>{movieSelected}</h1>
+        <h1>{movieSelected.title}</h1>
         <IconContext.Provider value={{ color: "red", className: 'Like'}}>
             {like === false ? <AiOutlineHeart  onClick={handleLikeClick} className="Like"/> : <AiFillHeart  onClick={handleLikeClick} className="Like"/>}
         </IconContext.Provider>
