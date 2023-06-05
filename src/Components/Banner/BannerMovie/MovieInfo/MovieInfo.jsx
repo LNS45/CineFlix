@@ -2,9 +2,13 @@ import styled from "@emotion/styled";
 import Categoria from "./Categoria/Categoria";
 import MovieTitle from "./MovieTitle/MovieTitle";
 import MovieDescription from "./MovieDescription/MovieDescription";
+import { useContext } from "react";
+import { MovieContext } from "../../../../contexts/MovieContext";
 
 
 const MovieInfo = () => {
+
+    const {movieSelected} = useContext(MovieContext);
 
     const MovieInfo = styled.div`
         display: flex;
@@ -56,7 +60,7 @@ const MovieInfo = () => {
     `;
 
     return <MovieInfo>
-        <Categoria tipo="Superheroes" color="#6BD1FF"/>
+        <Categoria tipo={movieSelected.category} color={movieSelected.color}/>
         <MovieTitle />
         <MovieDescription />
     </MovieInfo>

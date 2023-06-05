@@ -41,7 +41,7 @@ const Banner = () => {
     
 
     return <Banner className='Banner'>
-        <BannerMovie /> 
+        <BannerMovie/> 
     </Banner>
 }
 

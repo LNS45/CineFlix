@@ -11,6 +11,8 @@ const MovieContextProvider = ({children}) => {
         cover: "https://www.laizquierdadiario.mx/IMG/logo/scale.jpg?1684969129",
         character: "",
         category: "Ciencia Ficcion",
+        color: "",
+        video: ""
     };
 
     //Contexto inicial

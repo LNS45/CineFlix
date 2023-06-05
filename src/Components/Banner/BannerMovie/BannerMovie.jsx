@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
 import MovieInfo from "./MovieInfo/MovieInfo";
+import { useContext } from "react";
+import { MovieContext } from "../../../contexts/MovieContext";
 
 const BannerMovie = () => {
+
+    const {movieSelected} = useContext(MovieContext);
 
     const BannerMovie = styled.div`
         width: 100%;
@@ -55,8 +59,8 @@ const BannerMovie = () => {
     `;
 
     return <BannerMovie>
-        <MovieInfo />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1c66wfYbNEs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        <MovieInfo/>
+        <iframe width="560" height="315" src= {movieSelected.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     </BannerMovie>
 };
 

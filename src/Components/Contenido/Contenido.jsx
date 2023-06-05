@@ -5,11 +5,11 @@ const Contenido = () => {
     
 
     const categorias = [
-        {id: "1", tipo: "Superheroes", color: "#6BD1FF"},
-        {id: "2", tipo: "Terror", color:"#6B5BE2"},
-        {id: "3", tipo: "Ciencia Ficcion", color:"#00C86F"},
-        {id: "4", tipo:"Animacion", color: "#DC6EBE"},
-        {id: "5", tipo: "Accion", color: "#e63535"}
+        {id: "1", name: "Superheroes", color: "#6BD1FF"},
+        {id: "2", name: "Terror", color:"#6B5BE2"},
+        {id: "3", name: "Ciencia Ficcion", color:"#00C86F"},
+        {id: "4", name:"Animacion", color: "#DC6EBE"},
+        {id: "5", name: "Accion", color: "#e63535"}
     ];
 
     const Contenido = styled.section`
@@ -28,7 +28,7 @@ const Contenido = () => {
         
         {//Por cada objeto de categorias se crea un Carrusel
         categorias.map((categoria, index) => (
-            <CarruselContainer color={categoria.color} tipo={categoria.tipo} key={index}/>
+            <CarruselContainer category={categoria} key={index}/>
         ))}
     </Contenido>
 }
