@@ -23,8 +23,9 @@ const MovieTitle = () => {
         justify-content: flex-start;
         padding: 0 30px;
         width: 100%;
-        height: 40px;
-        margin: 10px 0;
+        height: auto;
+        margin: 15px 0;
+        line-height: 1.3;
 
         & h1{
             width: auto;
@@ -42,6 +43,34 @@ const MovieTitle = () => {
         & .Like:hover{
             transform: scale(1.2);
         }
+
+        /*Adaptabilidad*/
+
+        /*TV*/
+        @media screen and (max-width: 4001px) and (min-width: 1282px){
+
+        }
+
+        /*PC*/
+        @media screen and (max-width: 1281px) and (min-width: 769px){
+
+        }
+
+        /*Tablets*/
+        @media screen and (max-width: 768px) and (min-width: 483px){
+            &{
+                margin-top: 3.125rem;
+            }
+        }
+
+        /*Movil*/
+        @media screen and (max-width: 482px) and (min-width: 0px){
+            &{
+                font-size: 1.25rem;
+                margin-top: 3.125rem;
+            }
+        }
+
     `;
 
     return <MovieTitle>

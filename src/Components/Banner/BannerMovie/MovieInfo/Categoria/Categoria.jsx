@@ -7,7 +7,7 @@ const Categoria = (props) => {
         background-color: ${color};
         width: auto;
         height: auto;
-        padding: 10px;
+        padding: .625rem;
         border-radius: 10px;
         color: var(--Blanco-Grisado);
         font-weight: 400;
@@ -15,30 +15,22 @@ const Categoria = (props) => {
         text-align: center;
         text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
         cursor: pointer;
-        align-self: center;
         
-
-            /*Tablets*/
-        @media screen and (max-width: 768px) {
+        
+        /*Tablets*/
+        @media screen and (max-width: 768px) and (min-width: 483px){
             & {
                 font-size: 1.25rem;
-                width: 7rem;
                 padding: .3125rem;
-                position: absolute;
-                left: 0;
-                bottom: 2rem;
             }
         }
 
+
             /*Movil*/
-        @media screen and (max-width: 482px) {
+        @media screen and (max-width: 482px) and (min-width: 0px) {
             & {
-                font-size: .8125rem;
-                width: 5rem;
+                font-size: .9375rem;
                 padding: .3125rem;
-                position: absolute;
-                left: 0;
-                bottom: 2rem;
             }
         }
     `;

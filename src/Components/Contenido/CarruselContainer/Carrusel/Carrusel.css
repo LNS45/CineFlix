@@ -4,3 +4,31 @@
     height: 270px;
     margin-top: 20px;
 }
+
+    /*Adaptabilidad*/
+
+/*TV*/
+@media screen and (max-width: 4001px) and (min-width: 1282px){
+
+}
+
+/*PC*/
+@media screen and (max-width: 1281px) and (min-width: 769px){
+
+}
+
+/*Tablets*/
+@media screen and (max-width: 768px) and (min-width: 483px){
+    .Carrusel{
+        width: 64%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*Movil*/
+@media screen and (max-width: 482px) and (min-width: 0px){
+    .Carrusel{
+        width: 80%;
+    }
+}

@@ -17,7 +17,7 @@ const BannerMovie = () => {
         /*Adaptabilidad*/
 
         /*TV*/
-        @media screen and (min-width: 1282px) {
+        @media screen and (min-width: 4000px) and (min-width: 1282px) {
             & iframe{
                 width: 600px;
                 height: 400px;
@@ -25,7 +25,7 @@ const BannerMovie = () => {
         }
 
         /*PC*/
-        @media screen and (max-width: 1281px) {
+        @media screen and (max-width: 1281px) and (min-width: 769px){
             & iframe{
                 width: 500px;
                 height: 300px;
@@ -33,27 +33,27 @@ const BannerMovie = () => {
         }
 
         /*Tablets*/
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 483px){
             & {
-                flex-direction: column;
-                height: 37.5rem;
+                flex-direction: column-reverse;
+                height: 38.5rem;
             }
             & iframe{
-                width: 400px;
-                height: 250px;
+                width: 25rem;
+                height: 15.625rem;
             }
         }
 
         /*Movil*/
-        @media screen and (max-width: 482px) {
+        @media screen and (max-width: 482px) and (min-width: 0px){
             & {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 height: 37.5rem;
             }
             & iframe{
                 width: 300px;
                 height: 250px;
-                z-index: 4;
+                z-index: 3;
             }
         }
     `;

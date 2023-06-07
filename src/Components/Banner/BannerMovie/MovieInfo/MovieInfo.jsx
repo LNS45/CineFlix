@@ -24,37 +24,41 @@ const MovieInfo = () => {
         /*Adaptabilidad*/
 
         /*TV*/
-        @media screen and (min-width: 1282px) {
+        @media screen and (max-width: 4000px) and (min-width: 1282px) {
             &{
                 box-sizing: border-box;
-                width: 600px;
-                height: 300px;
+                width: auto;
+                height: 18.75rem;
                 position: relative;
             }
         }
 
         /*PC*/
-        @media screen and (max-width: 1281px) {
+        @media screen and (max-width: 1281px) and (min-width: 769px) {
 
         }
 
         /*Tablets*/
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 483px) {
             &{
                 box-sizing: border-box;
-                width: 400px;
-                height: 300px;
+                width: 25rem;
+                height: 18.75rem;
                 position: relative;
+                border: 1px solid var(--Color-Secundario);
+                padding: .625rem;
             }
         }
 
         /*Movil*/
-        @media screen and (max-width: 482px) {
+        @media screen and (max-width: 482px) and (min-width: 0px) {
             &{
                 box-sizing: border-box;
-                width: 300px;
-                height: 300px;
-                position: relative;
+                width: 18.75rem;
+                height: 18.75rem;
+                border: 1px solid var(--Color-Secundario);
+                padding: .625rem;
+                
             }
         }
     `;

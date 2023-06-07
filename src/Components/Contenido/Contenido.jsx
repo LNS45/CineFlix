@@ -16,6 +16,7 @@ const Contenido = () => {
         position: relative;
         margin-top: 80px;
         width: 100%;
+        box-sizing: border-box;
         height: auto;
         background-image: linear-gradient(258deg, rgba(39,36,68, 0.3) 0%,rgba(4,12,45, 0.3) 100%),linear-gradient(348deg, rgb(33,41,55),rgb(63,70,84));
         display: flex;

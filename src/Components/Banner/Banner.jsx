@@ -31,16 +31,36 @@ const Banner = () => {
             opacity: 0.5;
         }
 
-        /*Adaptabilidad Movil*/
-        @media screen and (max-width: 768px) {
-        & {
-            height: 40vh;
+        /*Adaptabilidad*/
+
+        /*TV*/
+        @media screen and (min-width: 1282px) {
+
         }
-}
+
+        /*PC*/
+        @media screen and (max-width: 1281px) {
+
+        }
+
+        /*Tablets*/
+        @media screen and (max-width: 768px) {
+            & {
+                height: auto;
+            }
+            &::before{
+                background-image: none;
+            }
+        }
+
+        /*Movil*/
+        @media screen and (max-width: 482px) {
+
+        }
     `;
     
 
-    return <Banner className='Banner'>
+    return <Banner className='Banner' id='Banner'>
         <BannerMovie/> 
     </Banner>
 }

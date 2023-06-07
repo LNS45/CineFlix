@@ -36,8 +36,6 @@ const CarruselContainer = (props) => {
         align-items: center;
         margin-top: 1.25rem;
     `;
-    
-    
 
     return <CarruselContainer>
         <Categoria color={color} tipo={name}/>

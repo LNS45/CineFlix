@@ -9,8 +9,18 @@ import "./Carrusel.css";
 
 const Carrusel = (props) => {
     const {color, pelis} = props;
+    //Obtiene el width del dispositivo
+    const windowSize = window.innerWidth;
+    let slideConfiguration = {
+        slidesToShow: 3,
+        padding: "-0.625rem"
+    };
+    if(windowSize < 769){
+        slideConfiguration.slidesToShow = 1;
+        slideConfiguration.padding = "-50rem";
+    };
 
-    return <Slider className="Carrusel" slidesToShow={3} adaptiveHeight="true" autoplaySpeed={3000} autoplay="true" centerMode="true" centerPadding="-10px" focusOnSelect="true" speed={1000} >
+    return <Slider className="Carrusel" slidesToShow={slideConfiguration.slidesToShow} adaptiveHeight="true" autoplaySpeed={4000} autoplay="true" centerMode="true" centerPadding={slideConfiguration.padding} focusOnSelect="true" speed={1000} >
             {pelis.map((peli, index) => (
                 <VideoCard color={color} cover={peli.cover} personaje={peli.personaje} key={index} title={peli.title} description={peli.description} id={peli.id} category={peli.category} video={peli.video}/>
             ))}

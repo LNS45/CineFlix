@@ -7,11 +7,15 @@ const VideoCard = (props) => {
 
     const {color, personaje, title, description, cover, category,video} = props;
     const {movieSelected, setMovieSelected} = useContext(MovieContext);
-    console.log(cover);
+    const scroll = () => {
+        const banner = document.querySelector("#Banner");
+        banner.scrollIntoView({behavior: "smooth"});
+    };
+    
     const VideoCard = styled.div`
         position: relative;
-        width: 380px;
-        height: 260px;
+        width: 23.75rem;
+        height: 16.25rem;
         border-radius: 10px;
         transition: .1s;
         background-color: black;
@@ -49,9 +53,39 @@ const VideoCard = (props) => {
         &:hover::before{
             opacity: 1;
         }
+
+        /*Adaptabilidad*/
+
+        /*TV*/
+        @media screen and (max-width: 4001px) and (min-width: 1282px){
+
+        }
+
+        /*PC*/
+        @media screen and (max-width: 1281px) and (min-width: 769px){
+
+        }
+
+        /*Tablets*/
+        @media screen and (max-width: 768px) and (min-width: 483px){
+            &{
+                width: 30rem;
+            }
+        }
+
+        /*Movil*/
+        @media screen and (max-width: 482px) and (min-width: 0px){
+            &{
+                width: 20rem;
+            }
+        }
+
     `;
     //Envia los datos de la peli para actualizarse el banner
-    return <VideoCard onClick={() => setMovieSelected({...movieSelected, title: title, description: description, cover: cover, category: category, color: color, video: video})}>
+    return <VideoCard onClick={() => {
+        setMovieSelected({...movieSelected, title: title, description: description, cover: cover, category: category, color: color, video: video})
+        scroll()
+        }}>
         <img src={cover} alt="Portada"/>
     </VideoCard>
 }

@@ -14,6 +14,17 @@ const Footer = () => {
         align-items: center;
         border-top:  2px solid var(--Color-Primario);
         justify-content: space-evenly;
+
+        /*Tablets*/
+        @media screen and (max-width: 768px) and (min-width: 483px){
+
+        }
+
+        /*Movil*/
+        @media screen and (max-width: 482px) and (min-width: 0px){
+            flex-direction: column;
+        }
+
     `;
     const FooterImg = styled.img`
         width: 150px;
