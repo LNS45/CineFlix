@@ -12,7 +12,8 @@ const MovieContextProvider = ({children}) => {
         character: "",
         category: "Ciencia Ficcion",
         color: "",
-        video: ""
+        video: "",
+        favorite: false,
     };
 
     //Contexto inicial

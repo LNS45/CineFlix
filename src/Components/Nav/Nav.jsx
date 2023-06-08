@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/Logo.png'
 import Boton from '../Boton/Boton';
 import styled from '@emotion/styled';
+import { useLocation } from 'react-router-dom';
 
 export const Nav = () => {
+    const location = useLocation();
 
     const Nav = styled.nav`
         position: fixed;
@@ -25,7 +27,10 @@ export const Nav = () => {
 
     return <Nav>
         <Link to='/'><NavImg src={Logo} alt='Logo'  /></Link>
-        <Boton/>
+        {   //No mostrar boton si esta en la ruta del formulario
+            (location.pathname !== "/Form") ? <Boton/> : <></>
+        }
+        
     </Nav>
 };
 

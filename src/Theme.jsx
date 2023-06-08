@@ -12,9 +12,9 @@ const darkTheme = createTheme({
         },
         secondary: {
             light: 'red',
-            main: 'blue',
-            dark: '#ba000d',
-            contrastText: '#000',
+            main: '#FFFFFF',
+            dark: '#268eed  ',
+            contrastText: '#FFFFFF',
         },
     },
 });
