@@ -4,9 +4,7 @@ import Contenido from "../Components/Contenido/Contenido";
 import Footer from "../Components/Footer/Footer";
 import { MovieContextProvider } from "../contexts/MovieContext";
 
-
 const Home = () => {
-
     return <>
         <Nav />
         <MovieContextProvider>

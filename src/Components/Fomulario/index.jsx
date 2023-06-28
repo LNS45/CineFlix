@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
-import FormTitle from "./FormTitle";
-import FormFields from "./FormFields";
+import Nav from "../Nav/Nav";
+import FormContainer from "./FormContainer";
+import Footer from "../Footer/Footer";
 
+const Formulario = () => {
 
-const FormContainer = () => {
-
-    const FormContainer = styled.section`
+    const StyledFormulario = styled.div`
         width: 100%;
         height: auto;
         display: flex;
@@ -15,12 +15,12 @@ const FormContainer = () => {
         flex-direction: column;
         align-items: center;
         background-image: linear-gradient(258deg, rgba(39,36,68, 0.3) 0%,rgba(4,12,45, 0.3) 100%),linear-gradient(348deg, rgb(33,41,55),rgb(63,70,84));
-    `;
-
-    return <FormContainer>
-        <FormTitle text="Nueva Película"/>
-        <FormFields />
-    </FormContainer>
+    `;  
+    return <StyledFormulario>
+        <Nav />
+        <FormContainer />
+        <Footer />
+    </StyledFormulario>
 };
 
-export default FormContainer;
+export default Formulario;

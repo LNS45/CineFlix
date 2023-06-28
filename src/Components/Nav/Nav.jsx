@@ -28,7 +28,7 @@ export const Nav = () => {
     return <Nav>
         <Link to='/'><NavImg src={Logo} alt='Logo'  /></Link>
         {   //No mostrar boton si esta en la ruta del formulario
-            (location.pathname !== "/Form") ? <Boton/> : <></>
+            (location.pathname === "/") ? <Boton/> : <></>
         }
         
     </Nav>

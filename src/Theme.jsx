@@ -1,23 +1,21 @@
-import { createTheme } from '@mui/material/styles';
-
+import { createTheme, } from '@mui/material/styles';
+import { green, blue, red} from '@mui/material/colors';
 
 //Creacion del tema Oscuro
 const darkTheme = createTheme({
     palette: {
-        primary: {
-            light: 'red',
-            main: '#00bd20',
-            dark: '#2ae433',
-            contrastText: 'black',
+        primary: {main: "#2ae433"},
+        secondary: {main: blue[700]},
+        text: {
+            primary: "#2ae433",
+            secondary: green[100]
         },
-        secondary: {
-            light: 'red',
-            main: '#FFFFFF',
-            dark: '#268eed  ',
-            contrastText: '#FFFFFF',
-        },
+        error:{
+            main: red['A400']
+        }
     },
 });
+
 
 
 export default darkTheme;
