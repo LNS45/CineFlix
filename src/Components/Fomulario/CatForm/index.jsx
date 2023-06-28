@@ -3,6 +3,7 @@ import FormFields from "../FormFields";
 import FormButtons from "../FormButtons";
 import { categoriaConfig } from "../InputsConfig";
 import { useFormik } from "formik";
+import FormTable from "../FormTable";
 
 const CatForm = () => {
     const formik = useFormik({
@@ -31,7 +32,8 @@ const CatForm = () => {
     return <>
         <FormTitle text="Nueva Categoria"/>
         <FormFields formik = {formikConfig}/>
-        <FormButtons boton="Nueva Pelicula" reset={formik.resetForm} location={"/Formulario/pelicula"} submit={formik.handleSubmit} codigo={formik.values.codigoSeguridad}/>
+        <FormButtons boton="Nueva Pelicula" reset={formik.resetForm} location={"/Formulario/pelicula"} submit={formik.handleSubmit}/>
+        <FormTable />
     </>
 };
 
