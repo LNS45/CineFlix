@@ -1,17 +1,25 @@
 import styled from '@emotion/styled';
 import CarruselContainer from './CarruselContainer';
+import { useEffect } from 'react';
+import {getDocs } from 'firebase/firestore/lite';
+import { useState } from 'react';
+import ref from '../../Database/FireBaseConfig';
 
 const Contenido = () => {
     
+    const [categorias, setCategorias] = useState([]);
 
-    const categorias = [
-        {id: "1", name: "Superheroes", color: "#6BD1FF"},
-        {id: "2", name: "Terror", color:"#6B5BE2"},
-        {id: "3", name: "Ciencia Ficcion", color:"#00C86F"},
-        {id: "4", name:"Animacion", color: "#DC6EBE"},
-        {id: "5", name: "Accion", color: "#e63535"}
-    ];
-
+    //Para llamar cada vez que se renderiza la pagina
+    useEffect(() => {
+        const getCategories = async () => {
+            //Respuesta a la promesa
+            const data = await getDocs(ref.categoriasCollection);
+            //Obtener categorias y agregarlas al estado
+            setCategorias(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        };
+        getCategories();
+    });
+    
     const Contenido = styled.section`
         position: relative;
         margin-top: 80px;
