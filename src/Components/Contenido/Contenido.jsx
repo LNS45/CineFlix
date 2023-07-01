@@ -31,7 +31,7 @@ const Contenido = () => {
         getPelis();
     }, []);
     
-    console.log(pelis)
+    
     const Contenido = styled.section`
         position: relative;
         margin-top: 80px;
@@ -56,5 +56,3 @@ const Contenido = () => {
 export default Contenido;
 
 
-
-//INSERT INTO movies VALUES(1,"Titulo","Cover","Icono", "Categoria", "Descripcion")

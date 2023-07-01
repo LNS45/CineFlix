@@ -3,6 +3,8 @@ import FormFields from "../FormFields";
 import FormButtons from "../FormButtons";
 import { useFormik } from "formik";
 import { peliculaConfig } from "../InputsConfig";
+import { addDoc } from "firebase/firestore/lite";
+import ref from "../../../Database/FireBaseConfig";
 
 const PeliForm = () => {
     const formik = useFormik({
@@ -19,10 +21,26 @@ const PeliForm = () => {
         validationSchema : peliculaConfig.validacionPelicula,
         onSubmit: (data) => {
             //Data enviada
-            console.log(data);
+            postPeliDoc(data);
             formik.resetForm();
         },
     });
+    const postPeliDoc = async (data) => {
+        const {categoria, descripcion, linkIcono, linkPortada, linkVideo, titulo} = data;
+        try {
+            await addDoc(ref.peliculasCollection, {
+                title: titulo,
+                category: categoria,
+                description: descripcion,
+                personaje: linkIcono,
+                cover: linkPortada,
+                video: linkVideo,
+            });
+            alert("La pelicula se agrego correctamente :)")
+        } catch (error) {
+            alert("Hubo un error al postear la pelicula");
+        }
+    };
     let formikConfig = {
         values: formik.values,
         errors: formik.errors,

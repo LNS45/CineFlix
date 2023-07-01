@@ -18,7 +18,7 @@ const Formulario = () => {
     `;  
     return <StyledFormulario>
         <Nav />
-        <FormContainer />
+        <FormContainer/>
         <Footer />
     </StyledFormulario>
 };

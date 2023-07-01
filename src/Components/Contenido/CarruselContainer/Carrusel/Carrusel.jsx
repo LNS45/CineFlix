@@ -3,9 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import VideoCard from "./VideoCard/VideoCard";
 import "./Carrusel.css";
-import { useEffect, useState } from "react";
-import { getDocs } from "firebase/firestore/lite";
-import ref from "../../../../Database/FireBaseConfig";
+
 
 
 
