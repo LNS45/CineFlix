@@ -8,7 +8,7 @@ import ref from '../../Database/FireBaseConfig';
 const Contenido = () => {
     
     const [categorias, setCategorias] = useState([]);
-
+    const [pelis, setPelis] = useState([]);
     //Para llamar cada vez que se renderiza la pagina
     useEffect(() => {
         const getCategories = async () => {
@@ -18,8 +18,20 @@ const Contenido = () => {
             setCategorias(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         };
         getCategories();
-    });
+    }, []);
     
+    //Para llamar cada vez que se renderiza la pagina
+    useEffect(() => {
+        const getPelis = async () => {
+            //Respuesta a la promesa
+            const data = await getDocs(ref.peliculasCollection);
+            //Obtener categorias y agregarlas al estado
+            setPelis(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        };
+        getPelis();
+    }, []);
+    
+    console.log(pelis)
     const Contenido = styled.section`
         position: relative;
         margin-top: 80px;
@@ -34,10 +46,9 @@ const Contenido = () => {
     `;
 
     return <Contenido>
-        
         {//Por cada objeto de categorias se crea un Carrusel
         categorias.map((categoria, index) => (
-            <CarruselContainer category={categoria} key={index}/>
+            <CarruselContainer category={categoria} key={index} pelis={pelis}/>
         ))}
     </Contenido>
 }

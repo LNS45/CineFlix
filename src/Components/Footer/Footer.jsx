@@ -23,6 +23,7 @@ const Footer = () => {
         /*Movil*/
         @media screen and (max-width: 482px) and (min-width: 0px){
             flex-direction: column;
+            align-items: center;
         }
 
     `;

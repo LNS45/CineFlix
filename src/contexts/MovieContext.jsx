@@ -15,9 +15,9 @@ const MovieContextProvider = ({children}) => {
         video: "",
         favorite: false,
     };
-    //Contexto inicial
+    //Contexto para pelicula del inicio
     let [movieSelected, setMovieSelected] = useState(movie);
-
+    
     return <MovieContext.Provider value={{movieSelected, setMovieSelected}}>
         {children}
     </MovieContext.Provider>

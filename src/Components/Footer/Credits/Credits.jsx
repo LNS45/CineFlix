@@ -10,6 +10,7 @@ const Credits = () => {
         display: flex;
         box-sizing: border-box;
         padding: 10px;
+        flex-direction: column;
     `;
 
     return <Credits>

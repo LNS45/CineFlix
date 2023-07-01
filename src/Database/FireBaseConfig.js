@@ -17,9 +17,11 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 //Se obtiene la referencia de la tabla a obtener
 const categoriasCollection = collection(db, "Categorias");
+const peliculasCollection = collection(db, "Movies");
 
 const ref = {
     categoriasCollection,
+    peliculasCollection,
 
 };
 

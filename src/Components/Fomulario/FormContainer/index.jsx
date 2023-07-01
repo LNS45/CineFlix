@@ -6,7 +6,7 @@ import CatForm from "../CatForm";
 const FormContainer = () => {
 
     const StyledFormContainer = styled.div`
-        width: 940px;
+        width: 58.75rem;
         height: auto;
         border-radius: 20px;
         margin-top: 20px;
@@ -18,6 +18,33 @@ const FormContainer = () => {
         -webkit-backdrop-filter: blur( 3px );
         border-radius: 10px;
         margin-bottom: 50px;
+
+                /*Adaptabilidad*/
+
+        /*TV*/
+        @media screen and (max-width: 4001px) and (min-width: 1282px){
+
+        }
+        /*PC*/
+        @media screen and (max-width: 1281px) and (min-width: 769px){
+            &{
+                width: 43.75rem;
+            }
+        }
+
+        /*Tablets*/
+        @media screen and (max-width: 768px) and (min-width: 483px){
+            &{
+                width: 28.125rem;
+            }
+        }
+
+        /*Movil*/
+        @media screen and (max-width: 482px) and (min-width: 0px){
+            &{
+                width: 21.875rem;
+            }
+        }
     `;
     return <StyledFormContainer>
         <Routes>

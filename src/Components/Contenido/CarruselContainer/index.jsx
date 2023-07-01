@@ -2,11 +2,32 @@ import styled from "@emotion/styled";
 import Categoria from "../../Banner/BannerMovie/MovieInfo/Categoria/Categoria";
 import Carrusel from "./Carrusel/Carrusel";
 
+
 const CarruselContainer = (props) => {
 
-    //Estructura
-    //{title: "", categoria: "", portada: "", personaje: ""}
-    const Pelis = [
+    const {name, color} = props.category;
+    const {pelis} = props;
+    
+    const CarruselContainer = styled.div`
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.25rem;
+    `;
+
+    return <CarruselContainer>
+        <Categoria color={color} tipo={name}/>
+        <Carrusel color={color} tipo={name} pelis={pelis}/>
+    </CarruselContainer>
+}
+
+export default CarruselContainer;
+
+
+/*    const Pelis = [
         {title: "Capitan America", category: "Superheroes", cover: "https://i0.wp.com/www.lacasadeel.net/wp-content/uploads/2019/12/Capitan-Am%C3%A9rica-El-primer-vengador.jpg", personaje: "https://www.nicepng.com/png/full/9-96828_captain-america-png-clipart-el-capitan-america-1.png", description: "Capitan Capitan", id: "9031", video:"https://www.youtube.com/embed/B96CZzcM1CA"}, 
         {title: "Five Nights at Fredys", category: "Terror", cover: "https://www.nintenderos.com/wp-content/uploads/2023/05/Five-Nights-At-Freddys.jpg", personaje: "https://i.pinimg.com/originals/f9/5f/12/f95f124e7fcc9b35f424e760b7a1854b.png", description: "Fredyss", id: "4893", video:"https://www.youtube.com/embed/f-zqS2CiZqw"},
         {title: "Dragon Ball Super Broly", category: "Animacion", cover: "https://www.elsoldeacapulco.com.mx/incoming/mbjyrl-dragon-ball-super-broly.jpg/ALTERNATES/LANDSCAPE_960/Dragon-Ball-Super-Broly.jpg", personaje: "https://i.pinimg.com/originals/45/ab/54/45ab54f605501d22a84f0d465209e0a6.png" , description: "Kamehamehaaaa!!!", id: "9402", video:"https://www.youtube.com/embed/dl3w10VVQj8"},
@@ -21,26 +42,4 @@ const CarruselContainer = (props) => {
         {title: "", category: "", cover: "", personaje: ""},
         {title: "", category: "", cover: "", personaje: ""}
 
-    ];
-
-    const {name, color} = props.category;
-    //Almacena las peliculas categorizadas en un objeto nuevo
-    const pelisCategorizadas = Pelis.filter(e => e.category === name)
-
-    const CarruselContainer = styled.div`
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1.25rem;
-    `;
-
-    return <CarruselContainer>
-        <Categoria color={color} tipo={name}/>
-        <Carrusel color={color} pelis={pelisCategorizadas}/>
-    </CarruselContainer>
-}
-
-export default CarruselContainer;
+    ]; */
