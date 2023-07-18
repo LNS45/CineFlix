@@ -98,9 +98,6 @@ const FormFields = ({formik}) => {
             label: "Color",
             value: color,
             type: "color",
-            invalid: false,
-            multiline: false,
-            helperText: "",
             
         },
         {

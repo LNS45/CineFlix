@@ -6,11 +6,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { useEffect, useState } from 'react';
-import { getDocs } from 'firebase/firestore/lite';
+import { deleteDoc, getDocs } from 'firebase/firestore/lite';
 import ref from '../../../Database/FireBaseConfig';
+import { doc } from 'firebase/firestore/lite';
 
-const FormTable = () => {
-    
+const FormTable = (props) => {
     const [categorias, setCategorias] = useState([]);
     //Para llamar cada vez que se actualice la variable categorias
     useEffect(() => {
@@ -21,8 +21,17 @@ const FormTable = () => {
             setCategorias(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         };
         getCategories();
+        
     }, [categorias]);
-    
+    const eliminarCategoria = async (id) => {
+        try {
+            await deleteDoc(doc(ref.db, "Categorias", id))
+            alert("La categoria ha sido eliminada con exito :)");
+        } catch (error) {
+            console.log(error)
+            alert("Hubo un error al eliminar la categoria")
+        }
+    };
     
     const cellStyle = {
         color: "#FFFFFF", 
@@ -37,7 +46,6 @@ const FormTable = () => {
                     <TableCell sx={cellStyle}>Categoria</TableCell>
                     <TableCell sx={cellStyle}>Descripcion</TableCell>
                     <TableCell sx={cellStyle}>Color</TableCell>
-                    <TableCell sx={cellStyle}>Editar</TableCell>
                     <TableCell sx={cellStyle}>Eliminar</TableCell>
                 </TableRow>
             </TableHead>
@@ -47,9 +55,8 @@ const FormTable = () => {
                         <TableRow key={index}>
                             <TableCell>{fila.name}</TableCell>
                             <TableCell>{fila.description}</TableCell>
-                            <TableCell><input type='color' value={fila.color}/></TableCell>
-                            <TableCell><Button onClick={() => console.log("Editar activado", index)} size='small'>Editar</Button></TableCell>
-                            <TableCell><Button onClick={() => console.log("Eliminar Activado", index)} size='small'>Eliminar</Button></TableCell>
+                            <TableCell><input type='color' value={fila.color} readOnly/></TableCell>
+                            <TableCell><Button onClick={() => eliminarCategoria(fila.id)} size='small'>Eliminar</Button></TableCell>
                         </TableRow>
                     ))
                 }

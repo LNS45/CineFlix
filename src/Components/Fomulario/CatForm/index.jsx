@@ -26,17 +26,18 @@ const CatForm = () => {
     //Post de la categoria
     const postCatDoc = async (data) => {
         const {nombre, descripcion, color} = data;
-        try {
-            await addDoc(ref.categoriasCollection, {
-                name: nombre,
-                description: descripcion,
-                color: color
-            });
-            alert("La categeria se agrego correctamente :)")
-        } catch (error) {
-            alert("Hubo un error al postear la categoria");
-        }
+            try {
+                await addDoc(ref.categoriasCollection, {
+                    name: nombre,
+                    description: descripcion,
+                    color: color
+                });
+                alert("Los datos han sido agregados correctamente :)")
+            } catch (error) {
+                alert("Hubo un error al agregar los datos");
+            }
     };
+
     let formikConfig = {
         values: formik.values,
         errors: formik.errors,
@@ -49,7 +50,7 @@ const CatForm = () => {
         <FormTitle text="Nueva Categoria"/>
         <FormFields formik = {formikConfig}/>
         <FormButtons boton="Nueva Pelicula" reset={formik.resetForm} location={"/Formulario/pelicula"} submit={formik.handleSubmit}/>
-        <FormTable />
+        <FormTable/>
     </>
 };
 

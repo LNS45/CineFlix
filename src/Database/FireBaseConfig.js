@@ -1,6 +1,6 @@
 //Importar las funciones a usar
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection } from "firebase/firestore/lite";
+import { getFirestore, collection} from "firebase/firestore/lite";
 
 //Configuracion
 const firebaseConfig = {
@@ -22,7 +22,7 @@ const peliculasCollection = collection(db, "Movies");
 const ref = {
     categoriasCollection,
     peliculasCollection,
-
+    db,
 };
 
 export default ref;

@@ -18,6 +18,7 @@ const FormContainer = () => {
         -webkit-backdrop-filter: blur( 3px );
         border-radius: 10px;
         margin-bottom: 50px;
+        position: relative;
 
                 /*Adaptabilidad*/
 
