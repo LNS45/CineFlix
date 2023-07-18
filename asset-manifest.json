@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/CineFlix/static/css/main.f7b0c0e6.css",
-    "main.js": "/CineFlix/static/js/main.8f631136.js",
-    "static/js/787.a01143d5.chunk.js": "/CineFlix/static/js/787.a01143d5.chunk.js",
-    "static/media/Logo.png": "/CineFlix/static/media/Logo.71f4ac9ac5fc01bca2d5.png",
-    "static/media/slick.svg": "/CineFlix/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/CineFlix/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/CineFlix/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/CineFlix/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/CineFlix/index.html",
-    "main.f7b0c0e6.css.map": "/CineFlix/static/css/main.f7b0c0e6.css.map",
-    "main.8f631136.js.map": "/CineFlix/static/js/main.8f631136.js.map",
-    "787.a01143d5.chunk.js.map": "/CineFlix/static/js/787.a01143d5.chunk.js.map"
+    "main.css": "/CineFlex/static/css/main.f2e019d9.css",
+    "main.js": "/CineFlex/static/js/main.ebca60ec.js",
+    "static/js/787.a01143d5.chunk.js": "/CineFlex/static/js/787.a01143d5.chunk.js",
+    "static/media/Logo.png": "/CineFlex/static/media/Logo.71f4ac9ac5fc01bca2d5.png",
+    "static/media/slick.svg": "/CineFlex/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/CineFlex/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/CineFlex/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/CineFlex/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/CineFlex/index.html",
+    "main.f2e019d9.css.map": "/CineFlex/static/css/main.f2e019d9.css.map",
+    "main.ebca60ec.js.map": "/CineFlex/static/js/main.ebca60ec.js.map",
+    "787.a01143d5.chunk.js.map": "/CineFlex/static/js/787.a01143d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7b0c0e6.css",
-    "static/js/main.8f631136.js"
+    "static/css/main.f2e019d9.css",
+    "static/js/main.ebca60ec.js"
   ]
 }
